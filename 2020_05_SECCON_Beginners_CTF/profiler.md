@@ -12,7 +12,7 @@ Notice: Server is periodically initialized
 `Register`と`Login`画面。  
 - Register  
 `Registered successfully. Your token is [token]. Don't lose it! `と表示される。  
-- Login
+- Login  
   プロフィール画面に遷移。`Update`と`Get FLAG`と`Logout`がある。  
     - Update  
     プロフィール文を更新する。`token`が必要

@@ -137,10 +137,10 @@ usernameに入力した内容が挿入されるので、XSSだろう。
 `./security.js`は`example.com/security.js`として処理され、コンソールログに404が表示される。  
 
 #### CSPのバイパス
-`security.js`はバイパスできたので次はCSPのバイパスを目指す。
+`security.js`はバイパスできたので次はCSPのバイパスを目指す。  
 CSPの`nonce`と`strict-dynamic`のバイパスを調べてたら[良さげな記事](https://szarny.hatenablog.com/entry/2019/01/01/XSS_Challenge_%28%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9F%E3%83%8B%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97_in_%E5%B2%A1%E5%B1%B1_2018_%E6%BC%94%E7%BF%92%E3%82%B3%E3%83%B3)。case23が似てる状況。  
 既に実行を許可されたscriptタグの中に任意のjsを埋め込みたい。
-case23を参考にとりあえず書いてみたら発火。
+case23を参考にとりあえず書いてみる。
 
 ```html
 <p id="message">[username], I recommend Nagashi somen for you.</p>

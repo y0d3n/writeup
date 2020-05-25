@@ -131,7 +131,7 @@ ID, Passでログインする画面
 
 ## 解
 アカウントが存在しているときにそのアカウントにログインしようとすると、パスワードが間違えてても遅延が発生してるっぽい。  
-レスポンスが0.1秒以上かかったのは`Elbert,George,Lazarus,Marc,Tony,Ximena,Yvonne`の7人。  
+レスポンスに0.1秒以上かかったのは`Elbert,George,Lazarus,Marc,Tony,Ximena,Yvonne`の7人。  
 `challenge page`で7人にチェック入れて送信すればflag。
 
 ```
