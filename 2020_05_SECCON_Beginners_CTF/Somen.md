@@ -152,7 +152,7 @@ case23を参考にとりあえず書いてみる。
 alert();//</title><script id="message"></script><base href="http://example.com">
 ```
 
-上を入力するとHTMLは以下のようになる。HTMLとしては壊れてるけど、よしなにしてくれる。
+上を入力するとHTMLは以下のようになる。HTMLとしては壊れてるけど、よしなにしてくれる。  
 titleに代入されたうえでidがmessageなとこに代入されるので結構ごちゃごちゃ。
 
 ```html
