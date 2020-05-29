@@ -8,6 +8,11 @@ You got the name-list of employees and the [URL] to the in-house web tool used b
 Your task is to enumerate the employees who use this tool in order to make it available for social engineering.
 ```
 
+## 添付ファイル
+
+- [app.py](./attachments/app.py)
+- [employees.txt](./attachments/employees.txt)
+
 ## 概要
 
 配布されてるのはソースコードと名簿。
