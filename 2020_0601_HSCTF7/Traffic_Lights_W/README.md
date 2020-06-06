@@ -1,4 +1,4 @@
-# Traffic Lights 
+# Traffic Lights
 
 ```txt
 🚦Can you figure out what's going on with this shady company?
