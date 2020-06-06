@@ -18,9 +18,9 @@ Author: hmmm
 
 ![login](../img/Broken_Tokens.png)  
 
-- ログインページ  
+- ログインページ: `/`  
 適当なID、Passでログインすると`Logged in as guest`と表示される。  
-  - publickey.pen  
+  - publickey.pem: `/publickey.pem`  
   publickkeyが書いてある。これを使えってことだろう。
 
 ログインしたら以下のようなCookieがセットされ、変に弄ったら`InternalServerError`になる。  

@@ -42,7 +42,7 @@ const onClick = () => {
 
 Burpで通信を見てみる。
 
-```http
+```txt
 > POST /yolo_0000000000001 HTTP/1.1
 > Host: debt-simulator-login-backend.web.hsctf.com
     :
@@ -68,7 +68,7 @@ BurpでDropしたら上手く消せた。`getPay`をSend、`getCost`をDropを�
 
 OPTIONでリクエストを送ってみると、GETができるらしい。
 
-```http
+```txt
 > OPTIONS /yolo_0000000000001 HTTP/1.1
 > Host: debt-simulator-login-backend.web.hsctf.com
     :
@@ -80,7 +80,7 @@ OPTIONでリクエストを送ってみると、GETができるらしい。
 
 GETリクエストを送る。
 
-```http
+```txt
 > GET /yolo_0000000000001 HTTP/1.1
 > Host: debt-simulator-login-backend.web.hsctf.com
     :
@@ -100,7 +100,7 @@ GETリクエストを送る。
 `getgetgetgetgetgetgetgetgetFlag`なるものがあるらしい。
 POSTしてみる。
 
-```http
+```txt
 > POST /yolo_0000000000001 HTTP/1.1
 > Host: debt-simulator-login-backend.web.hsctf.com
     :

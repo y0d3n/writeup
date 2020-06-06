@@ -67,8 +67,8 @@ zipファイル
 8重にzipされてるので展開していったら`flag.txt`があるが、中身は`No flag here. :(`。  
 7zipで展開してるときに8つのファイルにコメントがついてることに気付いた。  
 
-1.zip => f
-2.zip => l
+1.zip => f  
+2.zip => l  
     :
 
 と続いていって8文字のflagが手に入る。
@@ -198,7 +198,7 @@ Operation (+ - * /): +
 
 数字を2個と演算子を指定したら計算するっぽいように見せておいて、数字は1しか対応してないし、演算子はif列挙。  
 firstとsecondはintじゃないとエラー吐くっぽい。  
-いろいろ適当に入力してたら不自然なエラーメッセージを見つけた。
+いろいろ適当に入力してたら`hoge`入力時に不自然なエラーメッセージを見つけた。
 
 ```txt
 First number: hoge
@@ -222,11 +222,19 @@ Operation (+ - * /): +
 
 ビンゴ。あとはやるだけ。
 
-```python
-ord(open("flag.txt").read()[0:1])
+```txt
+Welcome to my calculator!
+You can add, subtract, multiply and divide some numbers
+
+First number: ord(open("flag.txt").read()[0:1])
+Second number: 0
+Operation (+ - * /): hoge
+
+Sorry, only the number 1 is supported
+102
 ```
 
-これでflag.txtの1文字目が10進数で出るので、よしなに変換していく。  
+これでflag.txtの1文字目がわかる。102は**f**。  
 `[1:2]`,`[2:3]`と1文字ずつやった。  
 python詳しくないのでもっといい方法有るかもしれない。というかあって欲しい。
 
