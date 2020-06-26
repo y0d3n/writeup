@@ -10,7 +10,7 @@ Site: (url)
 
 ![static-static](./img/static-static.png)
 
-[static-pastebin](../../../static-pastebin)と同じような感じ。
+[static-pastebin](../static-pastebin)と同じような感じ。
 サニタイジングが変わってる。
 
 ```js
