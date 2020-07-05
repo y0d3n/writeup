@@ -1,5 +1,7 @@
 # Web Warm-up
 
+33pt (220 Solves)
+
 ```txt
 Warm up! Can you break all the tasks? I'll pray for you!
 
